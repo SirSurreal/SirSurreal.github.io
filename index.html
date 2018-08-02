@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+    <title>Liam's Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="portfolio.css" type="text/css" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+   
+    <style>
+    h1{
+        text-decoration: none;	
+    }
+    </style>
+	<script>
+	function picreplace()
+{
+    $("#hoverReplace").attr('src', 'images/about mehhover.fw.png');
+	
+}
+
+function picreturn()
+{
+    $("#hoverReplace").attr('src', 'images/about meh.fw.png');
+}
+	</script>
+</head>
+
+<body>
+    <div id="webcontainer">
+    <div id="header">
+        
+        <!--navigation hide on scroll-->
+        <script>
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+	document.getElementById("bar").style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-50px";
+	 document.getElementById("bar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+        
+        
+        <div id="bar"></div>
+        
+        <script src="js/jssor.slider-27.4.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+              {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+              {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1500;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin double-tail-spin css*/
+        .jssorl-004-double-tail-spin img {
+            animation-name: jssorl-004-double-tail-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-004-double-tail-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 031 css*/
+        .jssorb031 {position:absolute;}
+        .jssorb031 .i {position:absolute;cursor:pointer;}
+        .jssorb031 .i .b {fill:#000;fill-opacity:0.5;stroke:#fff;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.3;}
+        .jssorb031 .i:hover .b {fill:#fff;fill-opacity:.7;stroke:#000;stroke-opacity:.5;}
+        .jssorb031 .iav .b {fill:#fff;stroke:#000;fill-opacity:1;}
+        .jssorb031 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
+	 <div id="jssor_1" style="position:relative;margin:0 auto;top:43px;left:18px;width:1500px;height:500px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/double-tail-spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1500px;height:500px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="images/Resume/IMG_1216.JPG" />
+            </div>
+            <div>
+                <img data-u="image" src="images/Resume/IMG_1590.JPG" />
+            </div>
+            <div>
+                <img data-u="image" src="images/IMG_1449.JPG" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();</script>
+    <!-- #endregion Jssor Slider End -->
+        
+        
+        <div id="nav">
+            <div class="dropdown">
+              <a href="index.html"><button class="dropbtn"><h3>Home</h3></button></a>
+              <div class="dropdown-content">
+              </div>
+            </div>
+            
+             <div class="dropdown">
+              <a href="resume.html"><button class="dropbtn"><h3>Resume</h3></button></a>
+              <div class="dropdown-content">
+              </div>
+            </div>
+            
+             <div class="dropdown">
+              <a href="html.html"><button class="dropbtn"><h3>Html</h3></button></a>
+              <div class="dropdown-content">
+                <a href="my work/HTML/Art_OP-art/index.html">OP Art</a>
+                <a href="my work/HTML/Chapter 2 Hands on/2.1 Hello World.html">Hands-on</a>
+                <a href="my work/HTML/Video Game Project; Dayz/index.html">Dayz</a>
+              </div>
+            </div>
+            
+             <div class="dropdown">
+              <a href="flash.html"><button class="dropbtn"><h3>Flash</h3></button></a>
+              <div class="dropdown-content">
+                <a href="PPP.html">Interactive Story</a>
+                <a href="robo.html">Roboscope</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="fireworks.html"><button class="dropbtn"><h3>Fireworks</h3></button></a>
+              <div class="dropdown-content">
+              </div>
+            </div>  
+        </div>
+     </div>
+        
+	<div id="body">
+        <br><br><br><br><br><br>
+        
+        <div class="nav2" >
+            <div class="botnav"><br>
+                <a href="Resume.html"><img src="images/Resume.gif" height="175" width="175"><br><h1>Resume</h1>	
+                    <p>Resumes are an important part of showing your future employers what you are capable of. My resume has been written by me to show what I have done and that I do have the experiance to work. 										</p><br><br><br></a>
+                </div>
+            <div class="botnav"><br>
+                <a href="html.html"><img src="images/html.gif" height="175" width="175"><br><h1>HTML</h1>	
+                    <p>HTML is the basic coding laungage for web development. Here I show my previous experiance in typing and configuring HTML, cssm, and javascript code. I include all my past projects to show 					                       what I have learned in my 2 years of study at the Sanilac Career Center.</p></a><br></div>	
+            <div class="botnav"><br>
+                <a href="flash.html"><img src="images/flash.gif" height="175" width="175" ><br><h1>Flash</h1>	
+                    <p>Flash animation is a very good thing to know while working with computers. It helps to show that you have creativity and the means to bring your ideas to life. On this page I show my past                      projects that I have worked on.</p></a><br></div>	
+            <div class="botnav"><br>
+                <a href="fireworks.html"><img src="images/Fireworks.gif" height="175" width="175"><br><h1>Fireworks</h1>
+                    <p>Flash animation is a very good thing to know while working with computers. It helps to show that you have creativity and the means to bring your ideas to life. On this page I show my past                      projects that I have worked on.</p></a><br><br></div>	
+            
+        </div><br><br>
+       <div id="aboutme">
+		<div id="logo" style="font:150px 'Pacifico', Helvetica, sans-serif;">About Me</div>
+		<div id="pic"><img src="images/grad Liam.fw.png" alt="picture of me at graduation" height ="690px" width="359" align"left">
+		<div class="desc">
+				<h3>Hi, I am Liam Hughes</h3>
+			<p>&nbsp;	I was raised in Port Sanilac, Michigan and have loved every second of it. I went to Carsonville-Port Sanilac Schools from preschool to graduation, and couldn’t be more proud. I’m a hard worker, and very much a people person. I intend to use these traits to the best of my abilites to be the best Web Developer I can be.</p>
+				<h3>So far:</h3>	
+			<p>&nbsp;Growing up, I was always interested in coding in anyway I can. From Youtube tutorial videos I learned basic C++, HTML, and CSS. Even making a basic version of Galatica with its differences. In high school, I was given the chance to go the local Sanilac Career Center and participated in the Digital Media Program followed by Advanced Web. I learned and mastered HTML and CSS. While also learning photo editing and animation. 
+			<br>This is the point where I stood confident that Web development was my passion.</p>
+				<h3>My Passion:</h3>
+			<p>&nbsp;My passion is coding. I plan to attend Delta Community College for their  Assoisates Advanced Web Degree, then following up going to SVSU for Javascript and other programming languages to make myself as versitile as possible. I have strong commitment to making responsive and visually pleasing websites.</p>
+		
+		
+		
+		</div>
+
+   
+
+</p></div></div>
+</div>
+      
+    <div id="footer">
+        <div class="footerwrap">
+        <a href ="index.html">      Home</a> &nbsp;&nbsp;
+            <a href ="Resume.html">    Resume</a>&nbsp;&nbsp;
+            <a href ="html.html">    HTML</a>&nbsp;&nbsp;
+            <a href ="flash.html"> Flash</a>&nbsp;&nbsp;
+            <a href ="fireworks.html">    Fireworks</a>&nbsp;&nbsp;
+        </div>
+        
+        </div>
+	</div>
+</body>
+</html>
